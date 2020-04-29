@@ -1,0 +1,7 @@
+#!/bin/bash
+ext=$1
+for file in "$PWD/"*.$ext
+do
+    ffmpeg -i "$file" -c:v libx265 "$(basename "$file" .$ext).mkv"
+done
+rm -rf *.$ext

@@ -1,0 +1,7 @@
+#!/bin/bash
+ext=$1
+for file in "$PWD/"*.$ext
+do
+	ffmpeg -i "$file" "$(basename "$file" .$ext).opus"
+done
+rm -rf *.$ext

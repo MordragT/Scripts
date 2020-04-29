@@ -1,0 +1,7 @@
+#!/bin/bash
+for file in "$PWD/"*
+do
+	tar -Ipixz -cf $file.tpxz $file
+done
+find . -type f -not -name '*.tpxz' | xargs rm
+
