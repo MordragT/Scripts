@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ext=$1
+for folder in "$PWD/"*
+do
+    tokei "$folder"
+done

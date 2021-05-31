@@ -1,0 +1,5 @@
+#!/bin/bash
+for file in "$PWD/"*.dds
+do
+	convert "$file" "$(basename "$file").png"
+done
